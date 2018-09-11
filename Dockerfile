@@ -27,3 +27,5 @@ RUN pip install --upgrade pip
 ADD requirements.txt /usr/src/requirements.txt
 
 RUN pip install -r /usr/src/requirements.txt
+
+RUN apt-get install -y iputils-ping telnet
