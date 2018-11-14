@@ -73,4 +73,4 @@ RUN mkdir /opencv-${OPENCV_VERSION}/cmake_binary \
 && rm /${OPENCV_VERSION}.zip \
 && rm -r /opencv-${OPENCV_VERSION}
 
-RUN apt-get update -y && apt-get install -y swig
+RUN mkdir -p /opt/protobuf && wget -O /opt/protobuf/protobuf.zip https://github.com/google/protobuf/releases/download/v3.0.0/protoc-3.0.0-linux-x86_64.zip && cd /opt/protobuf/ && unzip protobuf.zip && rm -f protobuf.zip

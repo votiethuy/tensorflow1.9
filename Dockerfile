@@ -41,6 +41,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends libsm6 libxext6
         vim &&\
     rm -rf /var/lib/apt/lists/*
 
+ADD requirements-gpu.txt /usr/src/requirements.txt
+
+RUN pip install -r /usr/src/requirements.txt
+
 WORKDIR /
 ENV OPENCV_VERSION="3.4.2"
 RUN wget https://github.com/opencv/opencv/archive/${OPENCV_VERSION}.zip \
@@ -68,3 +72,5 @@ RUN mkdir /opencv-${OPENCV_VERSION}/cmake_binary \
 && make -j8 && make install \
 && rm /${OPENCV_VERSION}.zip \
 && rm -r /opencv-${OPENCV_VERSION}
+
+RUN mkdir -p /opt/protobuf && wget -O /opt/protobuf/protobuf.zip https://github.com/google/protobuf/releases/download/v3.0.0/protoc-3.0.0-linux-x86_64.zip && cd /opt/protobuf/ && unzip protobuf.zip && rm -f protobuf.zip
