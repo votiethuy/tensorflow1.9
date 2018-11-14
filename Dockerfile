@@ -41,7 +41,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends libsm6 libxext6
         vim &&\
     rm -rf /var/lib/apt/lists/*
 
-ADD requirements-gpu.txt /usr/src/requirements.txt
+ADD requirements.txt /usr/src/requirements.txt
 
 RUN pip install -r /usr/src/requirements.txt
 
@@ -79,3 +79,5 @@ RUN mkdir -p /opt/protobuf && wget -O /opt/protobuf/protobuf.zip https://github.
     rm -f protobuf.zip && \
     mv bin/* /usr/local/bin/ && \
     mv include/* /usr/local/include/
+
+RUN pip install -U protobuf

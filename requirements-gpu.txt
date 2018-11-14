@@ -8,9 +8,9 @@ cycler==0.10.0
 decorator==4.3.0
 entrypoints==0.2.3
 gast==0.2.0
-googleapis-common-protos==1.5.3
-grpcio==1.12.1
-grpcio-tools==1.12.1
+googleapis-common-protos==1.5.5
+grpcio==1.16.0
+grpcio-tools==1.16.0
 h5py==2.8.0
 html5lib==0.9999999
 idna==2.7
@@ -26,9 +26,9 @@ jupyter==1.0.0
 jupyter-client==5.2.3
 jupyter-console==5.2.0
 jupyter-core==4.4.0
-Keras==2.2.0
-Keras-Applications==1.0.2
-Keras-Preprocessing==1.0.1
+Keras==2.2.4
+Keras-Applications==1.0.6
+Keras-Preprocessing==1.0.5
 kiwisolver==1.0.1
 Markdown==2.6.11
 MarkupSafe==1.0
