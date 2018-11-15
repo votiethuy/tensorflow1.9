@@ -36,6 +36,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends libsm6 libxext6
         libprotobuf-dev \
         libsnappy-dev \
         protobuf-compiler \
+        python3-tk \
         iputils-ping \ 
         telnet \
         vim &&\
@@ -80,4 +81,4 @@ RUN mkdir -p /opt/protobuf && wget -O /opt/protobuf/protobuf.zip https://github.
     mv bin/* /usr/local/bin/ && \
     mv include/* /usr/local/include/
 
-RUN pip install -U protobuf
+RUN pip install opencv-contrib-python
