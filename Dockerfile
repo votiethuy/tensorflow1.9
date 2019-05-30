@@ -1,4 +1,4 @@
-FROM tensorflow/tensorflow:1.12.0-devel-py3
+FROM tensorflow/tensorflow:1.9.0-devel-py3
 
 RUN apt-get update && apt-get install -y --no-install-recommends libsm6 libxext6 \
         swig \
@@ -74,7 +74,7 @@ RUN mkdir /opencv-${OPENCV_VERSION}/cmake_binary \
 && rm /${OPENCV_VERSION}.zip \
 && rm -r /opencv-${OPENCV_VERSION}
 
-RUN mkdir -p /opt/protobuf && wget -O /opt/protobuf/protobuf.zip https://github.com/google/protobuf/releases/download/v3.4.0/protoc-3.4.0-linux-x86_64.zip && \
+RUN mkdir -p /opt/protobuf && wget -O /opt/protobuf/protobuf.zip https://github.com/google/protobuf/releases/download/v3.7.1/protoc-3.7.1-linux-x86_64.zip && \
     cd /opt/protobuf/ && \
     unzip protobuf.zip && \
     rm -f protobuf.zip && \
